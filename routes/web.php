@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+# Devuelvo texto de aquí sin acceder al MIDDLEWARE
+Route::get('/helloWorldRoute', function () {
+    return ('Hello world from Route !');
+});
+
+# Devuelve contenido MIDDLEWARE creado y después contenido Route
+Route::get('/helloWorld', function () {
+    return ('HelloWorld');
+}) -> middleware('helloWorld');
