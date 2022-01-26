@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,8 @@ Route::get('/helloWorldRoute', function () {
 Route::get('/helloWorld', function () {
     return ('HelloWorld');
 }) -> middleware('helloWorld');
+
+# Source: https://www.toptal.com/laravel/restful-laravel-api-tutorial
+Route::get('/users', function () {
+    return User::all();
+});
