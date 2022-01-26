@@ -69,3 +69,17 @@ Para ejecutar el proyecto laravel a partir de ahora utilizaremos el comando:
 Para Crear un Middleware:
 
 `php artisan make:middleware HelloWorld`
+
+# Create controller
+
+Normal:
+`php artisan make:controller UserController`
+
+Api: 
+`php artisan make:controller api_userController --api`
+
+Resource:
+`php artisan make:controller resource_userController --resource`
+
+# PHP Create migration
+`php artisan make:migration create_flights_table` 
